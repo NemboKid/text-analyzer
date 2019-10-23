@@ -1,10 +1,6 @@
-'''
-File that shows menu
-'''
-
 def menu_here():
     '''
-    prints menu
+    prints menu in main.py
     '''
     print("lines) Count lines")
     print("words) Count words")
