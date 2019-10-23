@@ -1,5 +1,5 @@
 """
-Functions
+All functions
 """
 
 from collections import Counter
@@ -20,7 +20,7 @@ def open_file():
 random = 0
 def lines():
     """
-    Count lines
+    Counts number of lines
     """
     f = open(open_file(), "r")
     j = 0
@@ -32,9 +32,6 @@ def lines():
 
 
 def word_count():
-    """
-    Count wordss
-    """
     f = open(open_file(), "r")
     wordcount = Counter(f.read().split())
     list_words = []
@@ -113,24 +110,18 @@ def letter_frequency():
                 percent = wordcount[item] / letters() * 100
                 percent = round(percent, 1)
                 percent_list.append(percent)
-                 # print(str(wordcount[item]) + " |  " + str(percent) + "%")
+                
     global global_dict
     i = 0
     while i < len(letter_list):
-        # data = (str(letter_list[i]) + " | " + str(percent_list[i]) + "%")
-        # prep.append(data)
 
-        # global_dict['letter frequency'] = (str(letter_list[i]) + " | " + str(percent_list[i]) + "%")[i]
         print(str(letter_list[i]) + " | " + str(percent_list[i]) + "%")
         i += 1
-
-    # global_dict['letter frequency'] = prep
-    # print(wordcount.get("e"))
 
 
 def do_all():
     """
-    runs all functions
+    runs all functions together
     """
     print()
     print("Number of lines: " + str(lines()))
@@ -149,7 +140,7 @@ def do_all():
 
 def change():
     """
-    lets u change file to analyze
+    change file to analyze
     """
     global standard_textfile
     print("Try to change the file to \'max.txt\'")
